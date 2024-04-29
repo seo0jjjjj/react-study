@@ -1,0 +1,27 @@
+.MyPage {
+    width: 640px;
+}
+
+ul {
+    border: 1px solid rgb(241, 241, 241);
+
+    padding: 30px;
+    background-color: white;
+    display: block;
+    font-size: 1rem;
+    list-style-type: none;
+}
+
+li {
+    padding: 12px 30px;
+    border-bottom: 1px #ddd solid;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+.bottom-border {
+    border-bottom: 1px solid rgb(221, 221, 211);
+}
