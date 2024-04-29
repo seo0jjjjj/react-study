@@ -1,24 +1,18 @@
+import { useState } from 'react'
 import '../style/MyPage.css'
-import { users } from '../domain/userInfo.js'
-import Profile from '../componant/Profile'
-
-const user = users[0];
+import { Outlet, useOutlet } from 'react-router-dom'
+import MyPageMenu from '../component/MyPageMenu';
 
 
 export const MyPage = () => {
+    const hasOutlet = useOutlet() !== null;
+    const [title, setTitle] = useState("마이페이지");  // Context에서 title 사용
 
     return (
         <div className="MyPage">
-            <h1>마이페이지</h1>
-            <Profile src={user.src} name={user.name} className="bottom-border" />
-            <div>
-                <ul className="bottom-border">
-                    <li><div><span> 내가 작성한 글 보기 </span></div></li>
-                    <li>내가 작성한 댓글 보기</li>
-                    <li>댓글 보기</li>
-                    <li>회원 정보 수정</li>
-                </ul>
-            </div>
+            <h1>{title}</h1>
+            {!hasOutlet && <MyPageMenu />}
+            <Outlet />
         </div>
     )
 }

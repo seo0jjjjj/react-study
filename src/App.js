@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { MyPage } from "./pages/MyPage"
-
+import Posts from "./component/Posts";
+import EditProfile from "./component/EditProfile";
 const mainStyle = {
   display: 'flex',
   height: '100vh',
@@ -13,15 +14,14 @@ function App() {
 
     <BrowserRouter>
       <nav>
-        {/* <NavLink to="/">Home</NavLink> */}
         <NavLink to="/MyPage">About</NavLink>
-        {/* <NavLink to="/contact">Contact</NavLink> */}
       </nav>
       <div className="main" style={mainStyle}>
         <Routes>
-          {/* <Route path="/" element={<Start />} /> */}
-          {/* <Route path="/about" element={<About />} /> */}
-          <Route path="/MyPage" element={<MyPage />} />
+          <Route path="/MyPage" element={<MyPage />}>
+            <Route path="Posts" element={<Posts />} />
+            <Route path="EditProfile" element={<EditProfile />} />
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>

@@ -13,6 +13,7 @@ export const users = [
 
     {
         id: 2,
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhApfBvqx-wXiMp01pGyd9lRM-fxZaMMPpiOajFWDLqg&s",
         username: 'admin',
         password: '1234',
         name: "황영진",
