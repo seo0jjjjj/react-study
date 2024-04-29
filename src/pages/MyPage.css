@@ -1,0 +1,17 @@
+ul {
+    display: block;
+    font-size: 1rem;
+    list-style-type: none;
+}
+
+li {
+    padding: 12px 0px 12px 30px;
+    border-bottom: 1px black solid;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
