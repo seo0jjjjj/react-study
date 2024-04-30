@@ -9,7 +9,7 @@ export const MyPage = () => {
     const [title, setTitle] = useState("마이페이지");  // Context에서 title 사용
 
     return (
-        <div className="MyPage">
+        <div className="MyPage" >
             <h1>{title}</h1>
             {!hasOutlet && <MyPageMenu />}
             <Outlet />
